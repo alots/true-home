@@ -1,0 +1,89 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 68px;
+
+  background-color: #ffffff;
+
+  &__bloc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1260px;
+  }
+
+  &__brand {
+    margin-left:  10%;
+
+    @include below($mobileB) {
+      margin-left: 10px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  &__brandLogo {
+    height: 16px;
+    width: 16px;
+  }
+
+  &__brandName {
+    height: 16px;
+    width: 128px;
+
+    @include below($mobileB) {
+      height: 12px;
+      width: 80px;
+    }
+  }
+
+  &__links {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    @include below($mobileB) {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+  &__userAvatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn__login {
+    position: relative;
+
+    width: 128px;
+    height: 44px;
+    margin-left: 64px;
+    margin-right: 64px;
+  
+    
+
+    background-color: #FE805C;
+    border: 2px solid #FE805C;
+    box-sizing: border-box;
+    border-radius: 44px;
+    color: #ffffff;
+    @include between($mobileB, $notebook) {
+      margin-left: 32px;
+      margin-right: 32px;
+    }
+    @include below($mobileB) {
+      margin-left: 32px;
+      margin-right: 32px;
+    }
+  }
+}

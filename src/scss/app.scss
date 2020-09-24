@@ -1,7 +1,8 @@
 @import "vars";
 @import "mixins";
 @import "fonts";
-@import "header";
+@import "./components/header.scss";
+@import "./components/feedList.scss";
 @import "plugins";
 
 * {
@@ -13,6 +14,7 @@ body {
     padding: 0;
 
     font-family: $toyotaTR;
+    background-color: #dcdce4;
 }
 
 .wrapper {
@@ -32,9 +34,12 @@ h1 {
 
 .container {
     //width: 100%;
+    height: 800px;
     max-width: 1260px;
     margin: 0 auto;
     width: calc(100% - 35px);
+
+    ;
 
     @include below($mobileB) {
         width: calc(100% - 20px);
