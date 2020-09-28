@@ -1,0 +1,57 @@
+.feedBlock {
+  grid-area: feedBlock;
+  padding-top: 40px;
+}
+.feed {
+    
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    height: 248px;
+    width: 1260px;
+    
+
+    &__post {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      width: 220px;
+      height: 248px;
+      
+
+      background: #FFFFFF;
+      border-radius: 20px;
+
+    }
+
+    &__post:first-child {
+      padding-left: 0;
+    }
+
+    &__userAvatar {
+      width: 34px;
+      height: 34px;
+    }
+    
+  
+
+  .feedTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-end;
+    height: 64px;
+    margin-left: 15px;
+
+    
+
+    &__text {
+      font-family: Google Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+}
