@@ -5,13 +5,22 @@
   //justify-content: space-between;
   max-width: 300px;
   margin-top: 50px;
+  height: 580px;
 
   background: #FFFFFF;
   border-radius: 20px;
 
 
+  @include between($notebook, $desktop) {
+    max-width: 240px;
+  }
+
+  @include below($notebook) {
+    width: 300px;
+  }
+
   &__btn {
-    width: 264px;
+    width: auto;
     height: 44px;
     margin-left: 20px;
     margin-right: 20px;
@@ -30,7 +39,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 264px;
+    width: auto;
     height: 44px;
     margin-top: 20px;
     margin-left: 20px;
@@ -41,7 +50,7 @@
   }
 
   &__btnSwitch {
-    width: 106px;
+    width: auto;
     height: 38px;
 
     background: #FFFFFF;

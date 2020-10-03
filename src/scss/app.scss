@@ -7,38 +7,20 @@
 @import "./components/post.scss";
 @import "./components/wall.scss";
 @import "./components/nav.scss";
+@import "./components/ad.scss";
 @import "plugins";
 
+
 * {
-    box-sizing: border-box;
+  box-sizing: box-sizing;
+  
 }
 
-body {
-    margin: 0;
-    padding: 0; 
 
-    font-family: $toyotaTR;
-    background-color: #dcdce4;
-}
-
-.app {
-  display: grid;
-  grid-template-areas:  
-          "header header header"
-          "container container container";
- 
-  grid-template-columns: 33% 33% 34%; 
-  grid-template-rows: 68px 100%;
-}
 
 .wrapper {
   
     position: relative;
-
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-
     overflow: hidden;
 }
 
@@ -47,26 +29,6 @@ h1 {
     margin: 0;
 }
 
-.container {
-    grid-area: container;
-    display: grid;
-    grid-template-areas: 
-            "feedBlock feedBlock feedBlock"
-            "nav wall wall";
-    max-width: 1260px;
-    margin: 0 auto;
-    width: calc(100% - 35px);
-
-    ;
-
-    @include below($mobileB) {
-        width: calc(100% - 20px);
-    }
-
-    @include below($mobile) {
-        width: calc(100% - 15px);
-    }
-}
 
 input, textarea, button, select {
     outline: none;

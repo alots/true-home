@@ -3,13 +3,29 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   
-   max-width: 800px;
+  width: 680px;
   
-  margin-left: 10px;
+  margin-left: 20px;
 
+
+  @include between($notebook, $desktop) {
+    max-width: 580px;
+  }
+
+  @include between($mobileB, $tablet) {
+    max-width: 460px;
+  }
   
+  @include between($mobile, $mobileB) {
+    max-width: 280px;
+    margin-left: 40px;
+  } 
+  
+  @include below($mobile) {
+    max-width: 280px;
+  }
 
   &__post {
     
@@ -19,6 +35,7 @@
     margin-top: 50px;
     padding-left: 10px;
     width: 100%;
+    padding: 20px;
 
     
     margin-left: 10px;

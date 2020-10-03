@@ -1,0 +1,55 @@
+.ad {
+  grid-area: ad;
+  display: flex;
+  flex-direction: column;
+  
+  width: 260px;
+  
+  @include between($notebook, $desktop) {
+    max-width: 220px;
+  }
+
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 20px;
+    margin-top: 20px;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+
+  }
+
+  &__image {
+    width: 220px;
+    height: 168px;
+
+    @include between($notebook, $desktop) {
+      max-width: 180px;
+    }
+  }
+
+  &__title {
+    margin-top: 10px;
+
+    font-family: Google Sans;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: bold;
+  }
+
+  &__content {
+    margin-top: 10px;
+
+    font-family: Google Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: #9DA1A6;
+  }
+} 
