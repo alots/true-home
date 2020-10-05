@@ -2,12 +2,11 @@
   grid-area: nav;
   display: flex;
   flex-direction: column;
-  //justify-content: space-between;
   max-width: 300px;
   margin-top: 50px;
   height: 580px;
 
-  background: #FFFFFF;
+  background: $whiteBG;
   border-radius: 20px;
 
 
@@ -19,7 +18,14 @@
     width: 300px;
   }
 
+  @include below($tablet) {
+    display: none;
+  }
+
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: auto;
     height: 44px;
     margin-left: 20px;
@@ -27,11 +33,12 @@
     margin-top: 20px;
 
 
-    background-color: #FE805C;
-    border: 2px solid #FE805C;
+    text-decoration: none;
+    background-color: $orangeBtn;
+    border: 2px solid $orangeBtn;
     box-sizing: border-box;
     border-radius: 44px;
-    color: #ffffff;
+    color: $whiteTxt;
   }
 
   &__btnGroup {
@@ -45,20 +52,53 @@
     margin-left: 20px;
     margin-right: 20px;
 
-    background: #F5F7F8;
+    background: $grayBtn;
     border-radius: 10px;
+
   }
+
+  &__btnGroupItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    input[type=radio] {
+      display: none;
+    }
+
+    input[type=radio]:checked + label {
+      padding: 10px;
+      
+
+      background: $whiteBG;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      color: $orangeBtn;
+    }
+
+    input[type=radio]:hover + label {
+      cursor: pointer;
+    }
+
+    input[type=radio]:disabled + label {
+      color: black;
+      background: $grayBG;
+    }
+  }
+
 
   &__btnSwitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: auto;
-    height: 38px;
-
-    background: #FFFFFF;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    border-style: none;
-    color: #FE805C;
+    height: 38px;   
+    
+    
+    color: black;
+    background: #F5F7F8;
   }
+
 
   &__itemList {
     display: flex;
@@ -69,9 +109,20 @@
   &__item {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  &__itemRightBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 30px;
   }
 
   &__title {
@@ -88,8 +139,13 @@
     padding: 5px 5px 5px 5px;
 
 
-    background: #FE805C;
+    background: $orangeBtn;
     border-radius: 10px;
-    color: #FFFFFF;
+    color: $whiteTxt;
   }
+
+  
 }
+
+
+

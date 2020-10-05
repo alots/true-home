@@ -2,9 +2,9 @@
   grid-area: feedBlock;
   padding-top: 40px;
 
-  @include between($mobile, $mobileB) {
-    display: none;
-  }
+  @include below($tablet) {
+      display: none;
+  } 
   
 }
 
@@ -12,15 +12,14 @@
 
   &__text {
 
-    font-family: Google Sans;
+    font-family: 'Google Sans Regular';
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 100%;
   }
 }
-.feed {
-    
+.feed { 
     display: flex;
     flex-direction: row;
     margin-top: 20px;
@@ -32,54 +31,18 @@
 
     @include between($tablet, $notebook) {
       max-width: $tablet;
-      :nth-child(4) {
-        display: none;
-      }
-    }
-
-    @include between($mobileB ,$tablet) {
-      max-width: $mobileB;
-      :nth-child(4) {
-      display: none;
-      }
-      :nth-child(3) {
-        display: none;
-      }
-    }
-
-    @include between($mobile, $mobileB) {
-      zoom: .8;
-      /* :nth-child(4) {
-        display: none;
-        } */
-      :nth-child(3) {
-        display: none;
-      }
-      :nth-child(2n) {
-        display: none;
-      }
-    }  
-      @include below($mobile) {
-        zoom: .8;
-
-        :nth-child(3) {
-          display: none;
-        }
-        :nth-child(2n) {
-          display: none;
-        }
       
-    }  
-    
+      :nth-child(4) {
+        display: none;
+      }
+    }
 
     &__post {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       width: 220px;
       height: 248px;
-      
 
       background: #FFFFFF;
       border-radius: 20px; 
@@ -112,7 +75,7 @@
     
 
     &__text {
-      font-family: Google Sans;
+      font-family: 'Google Sans Regular';
       font-style: normal;
       font-weight: bold;
       font-size: 20px;

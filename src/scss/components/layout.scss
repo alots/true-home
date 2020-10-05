@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0; 
 
-  background-color: #dcdce4;
+  background-color: $grayBG;
 
   @include between($notebook, $desktop) {
     grid-template-areas:
@@ -25,7 +25,6 @@ body {
   @include below($notebook) {
     display: flex;
     flex-direction: column;
-    align-items: center;
     align-items: center;
   }
 }

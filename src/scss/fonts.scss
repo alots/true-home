@@ -1,4 +1,13 @@
 @font-face {
+  font-family: 'Google Sans Regular';
+  src: url('../fonts/sans/GoogleSans-Regular.eot');
+  src: url('../fonts/sans/fonts/GoogleSans-Regular.eot') format('embedded-opentype'),
+       url('../fonts/sans/fonts/GoogleSans-Regular.woff2') format('woff2'),
+       url('../fonts/sans/fonts/GoogleSans-Regular.woff') format('woff'),
+       url('../fonts/sans/fonts/GoogleSans-Regular.ttf') format('truetype'),
+       url('../fonts/sans/fonts/GoogleSans-Regular.svg#GoogleSans-Regular') format('svg');
+}
+/* @font-face {
     font-family: 'Toyota Text Regular';
     src: url('../fonts/ToyotaText-Regular.eot');
     src: local('../fonts/Toyota Text'), local('ToyotaText-Regular'),
@@ -43,3 +52,5 @@
     font-weight: normal;
     font-style: normal;
 }
+ */
+

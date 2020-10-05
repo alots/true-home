@@ -8,9 +8,9 @@
   width: 100%;
   
 
-  background-color: #ffffff;
+  background-color: $whiteBG;
 
-  &__bloc {
+  &__block {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,16 +66,20 @@
   }
 
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 128px;
     height: 44px;
     margin-left: 32px;
     margin-right: 32px;
 
-    background-color: #FE805C;
-    border: 2px solid #FE805C;
+    text-decoration: none;
+    background-color: $orangeBtn;
+    border: 2px solid $orangeBtn;
     box-sizing: border-box;
     border-radius: 44px;
-    color: #ffffff;
+    color: $whiteTxt;
 
   }
 }

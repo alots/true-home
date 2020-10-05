@@ -45,9 +45,9 @@
     padding: 4px 4px 4px 4px;
     margin-left: 20px;
 
-    background-color: #FFE99A;
+    background-color: $yellowUS;
     border-radius: 6px;
-    font-family: Google Sans;
+    font-family: 'Google Sans Regular';
     font-style: normal;
     font-weight: bold;
     font-size: 13px;
@@ -57,6 +57,7 @@
 
   &__userName {
     text-decoration: none;
+    color: $blueUN;
   }
 
   &__content {
@@ -69,7 +70,7 @@
   &__contentText {
     padding-top: 20px;
 
-    font-family: Google Sans;
+    font-family: "GoogleSansRegular";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -98,7 +99,7 @@
     margin: 5px;
    
 
-    background: #FFE99A;
+    background: $yellowUS;
     border-radius: 10px;
   }
 
@@ -156,19 +157,19 @@
 
   &__commentsCount {
 
-    color:#9DA1A6;
+    color: $grayTxt;
   }
 
   &__likeCount {
-    color:#9DA1A6;
+    color:$grayTxt;
   }
 
-  &__commentsBloc {
+  &__commentsBlock {
 
     margin-top: 20px;
     margin-right: 20px;
 
-    border-top: 1px solid #DDDDDD;
+    border-top: 1px solid $whiteUB;
   }
 
   &__btnMoreComents {
@@ -179,12 +180,12 @@
     margin-top: 10px;
     
     
-    color: grey;
-    background: #F5F7F8;
+    color: $grayTxt;
+    background: $grayBtn;
     border-radius: 48px;
   }
 
-  &__messageBloc {
+  &__messageBlock {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -199,7 +200,7 @@
     padding-left: 10px;
     padding-top: 10px;
 
-    background: #F5F7F8;
+    background: $grayBtn;
     border-radius: 20px;
   }
 
@@ -244,7 +245,7 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 14px;
-    color: #9DA1A6;
+    color: $grayTxt;
   }
 
 }
