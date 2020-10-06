@@ -17,7 +17,7 @@
     padding: 20px;
     margin-top: 20px;
 
-    background: #FFFFFF;
+    background: $whiteBG;
     border-radius: 20px;
 
   }
@@ -34,21 +34,17 @@
   &__title {
     margin-top: 10px;
 
-    font-family: Google Sans;
-    font-style: normal;
+    font-family: $sansB;
     font-size: 14px;
     line-height: 140%;
-    font-weight: bold;
   }
 
   &__content {
     margin-top: 10px;
 
-    font-family: Google Sans;
-    font-style: normal;
-    font-weight: normal;
+    font-family: $sansR;
     font-size: 14px;
     line-height: 140%;
-    color: #9DA1A6;
+    color: $grayTxt;
   }
 } 

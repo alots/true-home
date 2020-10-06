@@ -9,7 +9,7 @@
   
   margin-left: 10px;
 
-  background: #FFFFFF;
+  background: $whiteBG;
   border-radius: 20px;
 
   &__authorInfo {
@@ -29,9 +29,16 @@
   &__titleInfo {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     margin-left: 10px;
 
-    color: #9DA1A6;
+    
+  }
+
+  &__titleDate {
+    color: $grayTxt;
+    font-family: $sansB;
+    font-size: 13px;
   }
 
   &__titleDate {
@@ -47,10 +54,8 @@
 
     background-color: $yellowUS;
     border-radius: 6px;
-    font-family: 'Google Sans Regular';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
+    font-family: $sansB;
+    font-size: 9px;
     line-height: 140%;
 
   }
@@ -58,6 +63,9 @@
   &__userName {
     text-decoration: none;
     color: $blueUN;
+    font-family: $sansB;
+    font-size: 13px;
+
   }
 
   &__content {
@@ -70,9 +78,7 @@
   &__contentText {
     padding-top: 20px;
 
-    font-family: "GoogleSansRegular";
-    font-style: normal;
-    font-weight: normal;
+    font-family: $sansR;
     font-size: 14px;
     line-height: 140%;
   }
@@ -83,9 +89,7 @@
     flex-direction: row;
     justify-content: space-between;
 
-    font-family: Google Sans;
-    font-style: normal;
-    font-weight: bold;
+    font-family: $sansB;
     font-size: 16px;
     line-height: 140%;
   }
@@ -101,6 +105,9 @@
 
     background: $yellowUS;
     border-radius: 10px;
+    font-family: $sansB;
+    font-size: 14px;
+    line-height: 140%;
   }
 
   &__dataTimeImg {
@@ -112,9 +119,18 @@
     padding-top: 20px;
     
 
-    font-family: Google Sans;
-    font-weight: bold;
+    font-family: $sansB;
     font-size: 20px;
+    line-height: 140%;
+    font-style: normal;
+  }
+
+  &__contentTitleText__sm {
+    padding-top: 20px;
+    
+
+    font-family: $sansB;
+    font-size: 18px;
     line-height: 140%;
     font-style: normal;
   }
@@ -155,12 +171,29 @@
     height: 16px;
   }
 
-  &__commentsCount {
+  &__comments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
+  &__commentsCount {
+    font-family: $sansB;
+    font-size: 12px;
+    line-height: 14px;
     color: $grayTxt;
   }
 
+  &__likes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   &__likeCount {
+    font-family: $sansB;
+    font-size: 12px;
+    line-height: 14px;
     color:$grayTxt;
   }
 
@@ -183,6 +216,9 @@
     color: $grayTxt;
     background: $grayBtn;
     border-radius: 48px;
+    font-family: $sans;
+    font-size: 14px;
+    line-height: 14px;
   }
 
   &__messageBlock {
@@ -210,9 +246,7 @@
     margin-top: 10px;
     margin-right: 10px;
 
-    font-family: Google Sans;
-    font-style: normal;
-    font-weight: normal;
+    font-family: $sansR;
     font-size: 14px;
     line-height: 140%;
   }
@@ -233,16 +267,14 @@
     margin-left: 10px;
     margin-right: 10px;
 
-    border: 1px solid #DDDDDD;
+    border: 1px solid $whiteUB;
     box-sizing: border-box;
     border-radius: 10px;
   }
 
   &__messageAnswer {
 
-    font-family: Google Sans;
-    font-style: normal;
-    font-weight: bold;
+    font-family: $sansB;
     font-size: 14px;
     line-height: 14px;
     color: $grayTxt;

@@ -1,7 +1,7 @@
 @import "vars";
 @import "mixins";
 @import "fonts";
-@import "stylesheet";
+@import "./components/general.scss";
 @import "./components/layout.scss";
 @import "./components/header.scss";
 @import "./components/feed.scss";
@@ -10,51 +10,5 @@
 @import "./components/nav.scss";
 @import "./components/ad.scss";
 @import "plugins";
-
-
-* {
-  box-sizing: box-sizing;
-  
-}
-
-
-
-.wrapper {
-  
-    position: relative;
-    overflow: hidden;
-}
-
-h1 {
-    padding: 0;
-    margin: 0;
-}
-
-
-input, textarea, button, select {
-    outline: none;
-}
-
-input, select {
-    border: none;
-    border-bottom: 1px solid #A8A9AD;
-    padding-bottom: 15px;
-    cursor: pointer;
-    background: transparent;
-}
-
-img {
-    width: 100%;
-}
-
-.white-popup {
-    position: relative;
-    background: #FFF;
-    padding: 20px;
-    width:auto;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
 
 

@@ -39,6 +39,9 @@
     box-sizing: border-box;
     border-radius: 44px;
     color: $whiteTxt;
+    font-family: $sansB;
+    font-size: 14px;
+    line-height: 14px;
   }
 
   &__btnGroup {
@@ -84,6 +87,12 @@
       color: black;
       background: $grayBG;
     }
+
+    label {
+      font-family: $sansB;
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 
 
@@ -95,8 +104,8 @@
     height: 38px;   
     
     
-    color: black;
-    background: #F5F7F8;
+    color: $blackTxt;
+    background: $grayBtn;
   }
 
 
@@ -128,6 +137,11 @@
   &__title {
     margin-top: 20px;
     margin-left: 20px;
+
+    font-family: $sans;
+    font-size: 14px;
+    line-height: 14px;
+    color: $grayTxt;
   }
 
   &__itemLogo {
@@ -135,10 +149,18 @@
     height: 16px;
   }
 
+  &__itemText {
+    font-family: $sans;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
   &__itemCounter {
     padding: 5px 5px 5px 5px;
 
-
+    font-family: $sans;
+    font-size: 13px;
+    line-height: 14px;
     background: $orangeBtn;
     border-radius: 10px;
     color: $whiteTxt;
