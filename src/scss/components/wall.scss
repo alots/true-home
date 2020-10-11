@@ -1,0 +1,69 @@
+.wall {
+  grid-area: wall;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+
+  max-width: 740px;
+
+  @include between($notebook, $desktop) {
+    max-width: 460px;
+    min-width: 380px;
+  }
+
+  @include between($mobileB, $tablet) {
+    max-width: 360px;
+  }
+  
+  @include below($tablet) {
+    max-width: 460px;
+  } 
+
+  &__post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    margin-left: 10px;
+    background: $whiteBG;
+    border-radius: 20px;    
+  }
+
+  &__post__sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 220px;
+
+    background: $grayBtn;
+    border-radius: 20px;
+
+    @include below($tablet) {
+      display: none;
+    }
+  }
+
+  &__titleInfo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+
+    color: $grayTxt;
+
+    @include below($mobileB) {
+      flex-direction: column;
+    }
+  }
+
+  &__feedBlock {
+    grid-area: feedBlock;
+    padding-top: 40px;
+
+    background: $grayBtn;
+  }
+}
+

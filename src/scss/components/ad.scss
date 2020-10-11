@@ -1,0 +1,58 @@
+.ad {
+  grid-area: ad;
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+  
+  @include between($notebook, $desktop) {
+    max-width: 220px;  
+  }
+
+  @include between($tablet, $notebook) {
+    max-width: 220px;
+  }
+
+  @include below($tablet) {
+    display: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;   
+
+    background: $whiteBG;
+    border-radius: 20px;
+  }
+
+  &__image {
+    width: 220px;
+    height: autos;
+
+    @include between($notebook, $desktop) {
+      max-width: 180px;
+      max-height: auto;
+    }
+    @include between($tablet, $notebook) {
+      max-width: 180px;
+      height: auto;
+    }
+  }
+
+  &__title {
+    padding-top: 10px;
+    padding-left: 20px;
+
+    font-family: $sansB;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  &__content {
+    font-family: $sansR;
+    font-size: 14px;
+    line-height: 140%;
+    color: $grayTxt;
+  }
+} 

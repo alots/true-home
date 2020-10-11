@@ -1,0 +1,154 @@
+.nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+  max-height: 580px;
+  margin-top: 50px;
+  margin-right: 20px;
+  
+  background: $whiteBG;
+  border-radius: 20px;
+
+  @include below($desktop) {
+    min-width: 220px;
+  }
+
+  @include below($tablet) {
+    display: none;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 44px;
+
+    text-decoration: none;
+    background-color: $orangeBtn;
+    border: 2px solid $orangeBtn;
+    box-sizing: border-box;
+    border-radius: 44px;
+    color: $whiteTxt;
+    font-family: $sansB;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &__btnGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+
+    background: $grayBtn;
+    border-radius: 10px;
+  }
+
+  &__btnGroupItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    input[type=radio] {
+      display: none;
+    }
+
+    input[type=radio]:checked + label {
+      padding: 10px;
+      
+      background: $whiteBG;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      color: $orangeBtn;
+    }
+
+    input[type=radio]:hover + label {
+      cursor: pointer;
+    }
+
+    input[type=radio]:disabled + label {
+      color: black;
+      background: $grayBG;
+    }
+
+    label {
+      font-family: $sansB;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  &__btnSwitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 38px;       
+    
+    color: $blackTxt;
+    background: $grayBtn;
+  }
+
+  &__itemList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  &__itemRightBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  &__title {
+    margin-top: 20px;
+    margin-left: 20px;
+
+    font-family: $sans;
+    font-size: 14px;
+    line-height: 14px;
+    color: $grayTxt;
+  }
+
+  &__itemLogo {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__itemText {
+    font-family: $sans;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &__itemCounter {
+    padding: 5px 5px 5px 5px;
+
+    font-family: $sans;
+    font-size: 13px;
+    line-height: 14px;
+    background: $orangeBtn;
+    border-radius: 10px;
+    color: $whiteTxt;
+  }
+}
+
+
+

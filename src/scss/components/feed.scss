@@ -1,0 +1,56 @@
+.feedBlock {
+  grid-area: feedBlock;
+  padding-top: 40px;
+
+  @include below($tablet) {
+      display: none;
+  }   
+}
+
+.feedTitle {
+  font-family: $sansB;
+  font-size: 20px;
+  line-height: 100%;
+}
+.feed { 
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    @include below($tablet) {
+      display: none;
+    }
+    
+    @include between($notebook, $desktop) {
+      max-width: $notebook;
+      :nth-child(4) {
+        display: none;
+      }
+    }
+
+    @include between($tablet, $notebook) {
+      max-width: $tablet;
+      
+      :nth-child(4) {
+        display: none;
+      }
+    }
+
+    &__post {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 220px;
+
+      background: $whiteBG;
+      border-radius: 20px; 
+    }
+
+    &__post:first-child {
+      padding-left: 0;
+    }
+
+    &__userAvatar {
+      width: 34px;
+      height: 34px;
+    }
+}
