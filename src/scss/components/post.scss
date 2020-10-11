@@ -1,12 +1,7 @@
 .post {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-
-  /* width: 220px;
-  height: 248px; */
-  //margin-right: 10px;
-  
+  justify-content: space-around;  
   margin-left: 10px;
 
   background: $whiteBG;
@@ -15,10 +10,8 @@
   &__authorInfo {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    width: 200px;  
-    margin-left: 10px;
-    padding-top: 20px;
+    align-items: center;  
+    
   }
 
   &__userAvatar {
@@ -31,8 +24,6 @@
     flex-direction: column;
     align-items: flex-end;
     margin-left: 10px;
-
-    
   }
 
   &__titleDate {
@@ -42,8 +33,7 @@
   }
 
   &__titleDate {
-
-   margin-left: 10px;
+    margin-left: 10px;
   }
 
   &__userStatus {
@@ -58,6 +48,9 @@
     font-size: 9px;
     line-height: 140%;
 
+    @include below($mobileB) {
+      display: none;
+    }
   }
 
   &__userName {
@@ -65,33 +58,35 @@
     color: $blueUN;
     font-family: $sansB;
     font-size: 13px;
-
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
-    margin-right: 20px;
+    
   }
 
   &__contentText {
-    padding-top: 20px;
 
     font-family: $sansR;
     font-size: 14px;
     line-height: 140%;
+    padding-top: 10px;
   }
-
 
   &__contentTitle {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
     font-family: $sansB;
     font-size: 16px;
     line-height: 140%;
+
+    @include below($mobileB) {
+      flex-direction: column;
+    }
   }
 
   &__dataTime {
@@ -99,26 +94,23 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 200px;
     margin: 5px;
    
-
     background: $yellowUS;
     border-radius: 10px;
     font-family: $sansB;
     font-size: 14px;
     line-height: 140%;
   }
-
+  
   &__dataTimeImg {
     width: 16px;
     height: 16px;
   }
 
   &__contentTitleText {
-    padding-top: 20px;
+    display: flex;
     
-
     font-family: $sansB;
     font-size: 20px;
     line-height: 140%;
@@ -128,27 +120,39 @@
   &__contentTitleText__sm {
     padding-top: 20px;
     
-
     font-family: $sansB;
     font-size: 18px;
     line-height: 140%;
     font-style: normal;
+
+    @include below($tablet) {
+      display: none;
+    }
   }
 
   &__imgList {
     display: flex;
     flex-direction: row;
     padding-top: 20px;
-    
-    @include below($mobileB) {
+
+    @include below($desktop) {
       :nth-child(3) {
+        display: none;
+      }
+    }
+    
+    @include below($tablet) {
+      :nth-child(3) {
+        display: none;
+      }
+
+      :nth-child(2) {
         display: none;
       }
     }
   }
 
   &__image {
-
     margin-left: 10px;
     margin-right: 10px;
     width: 128px;
@@ -160,10 +164,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 20px;
-    padding-top: 20px;
-    margin-bottom: 10px;
   }
 
   &__icons {
@@ -198,10 +198,6 @@
   }
 
   &__commentsBlock {
-
-    margin-top: 20px;
-    margin-right: 20px;
-
     border-top: 1px solid $whiteUB;
   }
 
@@ -211,8 +207,7 @@
     justify-content: center;
     height: 48px;
     margin-top: 10px;
-    
-    
+        
     color: $grayTxt;
     background: $grayBtn;
     border-radius: 48px;
@@ -225,10 +220,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 20px;
-    padding-left: 10px;
-    margin-right: 20px;
+    width: auto;
 
+    @include below($mobileB) {
+      flex-direction: column;
+      align-items: flex-end;
+      max-width: 172px;
+    }
   }
 
   &__message {
@@ -241,7 +239,6 @@
   }
 
   &__messageText {
-
     margin-left: 10px;
     margin-top: 10px;
     margin-right: 10px;
@@ -261,7 +258,6 @@
   }
 
   &__inputMessage {
-
     width: 100%;
     height: 56px;
     margin-left: 10px;

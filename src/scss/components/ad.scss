@@ -2,37 +2,47 @@
   grid-area: ad;
   display: flex;
   flex-direction: column;
-  width: 260px;
+  max-width: 260px;
   
   @include between($notebook, $desktop) {
-    max-width: 220px;
-    
+    max-width: 220px;  
   }
 
+  @include between($tablet, $notebook) {
+    max-width: 220px;
+  }
+
+  @include below($tablet) {
+    display: none;
+  }
 
   &__item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;   
-    padding: 20px;
-    margin-top: 20px;
+    justify-content: space-between;
+    margin-top: 10px;   
 
     background: $whiteBG;
     border-radius: 20px;
-
   }
 
   &__image {
     width: 220px;
-    height: 168px;
+    height: autos;
 
     @include between($notebook, $desktop) {
       max-width: 180px;
+      max-height: auto;
+    }
+    @include between($tablet, $notebook) {
+      max-width: 180px;
+      height: auto;
     }
   }
 
   &__title {
-    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
 
     font-family: $sansB;
     font-size: 14px;
@@ -40,8 +50,6 @@
   }
 
   &__content {
-    margin-top: 10px;
-
     font-family: $sansR;
     font-size: 14px;
     line-height: 140%;

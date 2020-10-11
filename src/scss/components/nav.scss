@@ -2,20 +2,16 @@
   grid-area: nav;
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 260px;
+  max-height: 580px;
   margin-top: 50px;
-  height: 580px;
-
+  margin-right: 20px;
+  
   background: $whiteBG;
   border-radius: 20px;
 
-
-  @include between($notebook, $desktop) {
-    max-width: 240px;
-  }
-
-  @include below($notebook) {
-    width: 300px;
+  @include below($desktop) {
+    min-width: 220px;
   }
 
   @include below($tablet) {
@@ -28,10 +24,6 @@
     align-items: center;
     width: auto;
     height: 44px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-
 
     text-decoration: none;
     background-color: $orangeBtn;
@@ -50,14 +42,9 @@
     justify-content: space-around;
     align-items: center;
     width: auto;
-    height: 44px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
 
     background: $grayBtn;
     border-radius: 10px;
-
   }
 
   &__btnGroupItem {
@@ -72,7 +59,6 @@
     input[type=radio]:checked + label {
       padding: 10px;
       
-
       background: $whiteBG;
       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
@@ -95,19 +81,16 @@
     }
   }
 
-
   &__btnSwitch {
     display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
-    height: 38px;   
-    
+    height: 38px;       
     
     color: $blackTxt;
     background: $grayBtn;
   }
-
 
   &__itemList {
     display: flex;
@@ -165,8 +148,6 @@
     border-radius: 10px;
     color: $whiteTxt;
   }
-
-  
 }
 
 

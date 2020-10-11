@@ -1,61 +1,50 @@
 .wall {
   grid-area: wall;
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  
-  width: 680px;
-  
-  margin-left: 20px;
+  width: 100%;
 
+  max-width: 740px;
 
   @include between($notebook, $desktop) {
-    max-width: 580px;
+    max-width: 460px;
+    min-width: 380px;
   }
 
   @include between($mobileB, $tablet) {
+    max-width: 360px;
+  }
+  
+  @include below($tablet) {
     max-width: 460px;
-  }
-  
-  @include between($mobile, $mobileB) {
-    max-width: 280px;
-    margin-left: 40px;
   } 
-  
-  @include below($mobile) {
-    max-width: 280px;
-  }
 
   &__post {
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 50px;
-    padding-left: 10px;
     width: 100%;
-    padding: 20px;
     margin-bottom: 20px;
 
-    
     margin-left: 10px;
     background: $whiteBG;
-    border-radius: 20px;
-    
+    border-radius: 20px;    
   }
 
   &__post__sm {
     display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 220px;
 
-      width: 220px;
-      height: 248px;
-      padding: 5px;
+    background: $grayBtn;
+    border-radius: 20px;
 
-      background: $grayBtn;
-      border-radius: 20px;
+    @include below($tablet) {
+      display: none;
+    }
   }
 
   &__titleInfo {
@@ -64,6 +53,10 @@
     margin-left: 10px;
 
     color: $grayTxt;
+
+    @include below($mobileB) {
+      flex-direction: column;
+    }
   }
 
   &__feedBlock {
@@ -72,7 +65,5 @@
 
     background: $grayBtn;
   }
-
-
 }
 
