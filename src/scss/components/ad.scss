@@ -3,13 +3,10 @@
   display: flex;
   flex-direction: column;
   max-width: 260px;
-  
-  @include between($notebook, $desktop) {
-    max-width: 220px;  
-  }
+  margin-top: 10px;
 
   @include between($tablet, $notebook) {
-    max-width: 220px;
+    display: none;
   }
 
   @include below($tablet) {
@@ -30,10 +27,6 @@
     width: 220px;
     height: autos;
 
-    @include between($notebook, $desktop) {
-      max-width: 180px;
-      max-height: auto;
-    }
     @include between($tablet, $notebook) {
       max-width: 180px;
       height: auto;

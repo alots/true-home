@@ -1,8 +1,9 @@
 .feedBlock {
   grid-area: feedBlock;
-  padding-top: 40px;
+  padding-top: 38px;
+  margin-bottom: 40px;
 
-  @include below($tablet) {
+  @include below($notebook) {
       display: none;
   }   
 }
@@ -22,7 +23,7 @@
     
     @include between($notebook, $desktop) {
       max-width: $notebook;
-      :nth-child(4) {
+      :nth-child(3) {
         display: none;
       }
     }
@@ -30,16 +31,24 @@
     @include between($tablet, $notebook) {
       max-width: $tablet;
       
-      :nth-child(4) {
+      :nth-child(3) {
         display: none;
       }
     }
+
+    @include below($notebook) {
+      :nth-child(2) {
+        display: none;
+      }
+    } 
 
     &__post {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      min-width: 220px;
       max-width: 220px;
+      margin-left: 20px;
 
       background: $whiteBG;
       border-radius: 20px; 

@@ -2,8 +2,8 @@
   grid-area: header;
   display: grid;
   grid-template-areas: 
-                ". headerBlock headerBlock headerBlock .";
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                ". container container container .";
+  grid-template-columns: 1fr 273.3px 273.3px 273.3px 1fr;
   grid-template-rows: auto;
   height: auto;
   width: 100%;  
@@ -12,9 +12,22 @@
 
   @include between($tablet, $notebook) {
     grid-column-gap: inherit    
-                "headerBlock headerBlock headerBlock";
-    grid-template-columns: 1fr 1fr 1fr;
+                ". container container container .";
+    grid-template-columns: 100px 1fr 1fr 1fr 100px;
     grid-template-rows: auto;
+    margin-bottom: 40px;
+  }
+
+  @include between($mobileB, $tablet) {
+    grid-template-columns: 40px 1fr 1fr 1fr 40px;
+    margin-bottom: 40px;
+  }
+  
+  @include below($mobileB) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 
   &__block {
@@ -26,15 +39,19 @@
     width: 100%;
     padding: 10px;
     padding-left: 0;
-  }
-
-  &__brand {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 
     @include below($mobileB) {
-      margin-left: 10px;
+      justify-content: space-around;
+    }
+  }
+
+  &__logo {
+    max-height: 30px;
+    max-width: 166px;
+
+    @include below($mobileB) {
+      max-height: 20px;
+      max-width: 110px;
     }
   }
 
@@ -45,24 +62,9 @@
     align-items: center;  
   }
 
-  &__brandLogo {
-    height: 30px;
-    width: 24px;
-  }
-
-  &__brandName {
-    height: 16px;
-    margin-left: 10px;
-
-    @include below($mobileB) {
-      height: 12px;
-      width: 80px;
-    }
-  }
-
   &__links {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     margin-left: 10px;
     margin-right: 10px;
 
